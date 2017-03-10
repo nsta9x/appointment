@@ -1,10 +1,13 @@
+	var temp_login	 	= "template/apt_login.html";
+	$("#apt_login")		.load(temp_login);
+	$("#apt_login")		.hide();
+	
 	//Click button Login:
 	$("#btn_login").off("click");
 	$("#btn_login").on("click", function(){
-		alert("xh");
-		var temp_login	 	= "template/apt_login.html";
-		$("#apt_login")		.load(temp_login);
+		$("#apt_login")		.toggle(1000);
 		$("#frm_login").hide();
+		
 		$("#btn_login_login").click(function(){
 			$("#frm_login").show();
 			$("#frm_login_login").show();
@@ -21,6 +24,7 @@
 			$("#apt_login").hide();
 		});
 	});
+	
 	//$("#btn_login").off("click");
 	//$("#btn_login").on("click", function(){
 	//	$("#apt_login").toggle(1000);
