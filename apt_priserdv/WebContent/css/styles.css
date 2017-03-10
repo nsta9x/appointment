@@ -1,13 +1,22 @@
+div{
+	display: block;
+	margin-top: 10px;
+}
+
+a{
+	cursor:pointer;
+}
+
 #apt_header{
 	height: 100px;
-	position:fixed;
 	width: 100%;
 	display: block;
 	background-color: rgba(100,120,120,0.2);
 }
 
 #apt_header img{
-	max-height: 100px;
+	max-height: 90px;
+	margin-top: -15px;
 }
 
 #apt_login{

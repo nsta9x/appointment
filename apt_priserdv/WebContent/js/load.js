@@ -8,7 +8,7 @@ $( document ).ready(function() {
 	$("#apt_main").load(temp_main);
 
 	//Footer
-	var temp_footer = "template/footer.html";
+	var temp_footer = "template/apt_footer.html";
 	$("#apt_footer").load(temp_footer);
 	
 	//LogIn
