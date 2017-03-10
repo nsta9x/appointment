@@ -1,6 +1,7 @@
 /**
  * 
  */
+//$("#apt_login")		.hide();
 $("#btn_login").off("click");
 $("#btn_login").on("click", function(){
 	$("#apt_login").toggle(1000);
