@@ -4,5 +4,13 @@
     	<p class="apt_header_name">Le medecin connecte</p>
     </div>
     <div class="col-lg-5 col-sm-5 col-xs-5 apt_header_div"></div>
-    <div class="col-lg-4 col-sm-4 col-xs-4 apt_header_div"></div>
+    <div class="col-lg-4 col-sm-4 col-xs-4 apt_header_div"><button id="btn_login">LOGIN/SIGNUP</button></div>
 </div>
+<div id="apt_login"></div>
+<script>
+	var temp_login	 	= "template/apt_login.html";
+	$("#apt_login")		.load(temp_login);
+	$("#apt_login")		.hide();
+</script>
+<script src="js/apt_login.js"></script>
+
