@@ -6,6 +6,10 @@
 	background-color: rgba(100,120,120,0.2);
 }
 
+#apt_header img{
+	max-height: 100px;
+}
+
 #apt_login{
 	width: 80%;
 	margin: 20px auto;
