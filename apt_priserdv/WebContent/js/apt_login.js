@@ -4,17 +4,15 @@
 $("#btn_login").off("click");
 $("#btn_login").on("click", function(){
 	$("#apt_login").toggle(1000);
-	bindEventForm();
-});
-
-function bindEventForm(){
-	alert("Hello");
+	$("#frm_login").hide();
 	$("#btn_login_login").click(function(){
+		$("#frm_login").show();
 		$("#frm_login_login").show();
 		$("#frm_login_signup").hide();
 	});
 
 	$("#btn_login_signup").click(function() {
+		$("#frm_login").show();
 		$("#frm_login_signup").show();
 		$("#frm_login_login").hide();
 	});
@@ -52,7 +50,7 @@ function bindEventForm(){
 //	    	}
 //		});
 	});
-}
+});
 
 
 
