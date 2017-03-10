@@ -1,6 +1,5 @@
 div{
 	display: block;
-	margin-top: 10px;
 }
 
 a{
@@ -12,6 +11,8 @@ a{
 	width: 100%;
 	display: block;
 	background-color: rgba(100,120,120,0.2);
+	position: fixed;
+	top: 0;
 }
 
 #apt_header img{
@@ -21,7 +22,6 @@ a{
 
 #apt_login{
 	width: 80%;
-	margin: 20px auto;
 	border-collapse: collapse;
 	padding: 3px;
 	z-index: 1 !important;
@@ -34,7 +34,6 @@ a{
 
 #frm_login{
 	width: 60%;
-	margin: 20px auto;
 }
 #apt_main_p1{
 	height:450px;
@@ -54,5 +53,4 @@ a{
 
 #apt_main{
 	height: auto;
-	
 }
