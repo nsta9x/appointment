@@ -4,22 +4,36 @@
 	width: 100%;
 	position:fixed;
 }
-.row.content {height: 100%}
+.row.content {
+	height: 100%
+}
 
-.apt_header_div{height:100%;}
+.apt_header_div{
+	height:100%;
+}
 
-.apt_header_name{text-align: right;color: blue;left:-100px;}
-p.apt_header_name{position:relative; top:-20px; left: -5px;}
+.apt_header_name{
+	text-align: right;
+	color: blue;
+	left:-100px;
+}
 
+p.apt_header_name{
+	position:relative; 
+	top:-20px; 
+	left: -5px;
+}
 
 body {
     background-color: black;
     height: 1900px;
 }
+
 #apt_main{
 	background-color: red;
 	height: 200px;
 }
+
 h1{
 	font-size:100px;
 }
