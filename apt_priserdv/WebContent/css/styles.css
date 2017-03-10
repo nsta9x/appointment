@@ -10,6 +10,25 @@
 	display: block;
 }
 
-body{
-	height:1900px
+#apt_login{
+	width: 80%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	padding: 3px;
+	z-index: 1 !important;
+	background-color: #292732;
+	opacity: 0.8;
+	position: fixed;
+	text-align: center;
+	padding: 2px;
+}
+
+#frm_login{
+	width: 60%;
+	margin: 20px auto;
+}
+
+.apt_login_btn {
+	display: inline-block;
+	margin-left: 30px;
 }
