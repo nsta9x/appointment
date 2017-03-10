@@ -32,3 +32,9 @@
 	display: inline-block;
 	margin-left: 30px;
 }
+
+#apt_main{
+	height: 500px;
+	width: 100%;
+	background-color: red;
+}
