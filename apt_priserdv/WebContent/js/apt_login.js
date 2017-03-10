@@ -3,13 +3,12 @@
  */
 $("#btn_login").off("click");
 $("#btn_login").on("click", function(){
-	
 	$("#apt_login").toggle(1000);
-	$("#frm_login_signup").hide();
 	bindEventForm();
 });
 
 function bindEventForm(){
+	alert("Hello");
 	$("#btn_login_login").click(function(){
 		$("#frm_login_login").show();
 		$("#frm_login_signup").hide();
