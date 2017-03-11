@@ -15,4 +15,5 @@ $( document ).ready(function() {
 	var script_login = "js/apt_login.js";
 	$.getScript( script_login, function() {
 	});
+	
 });
