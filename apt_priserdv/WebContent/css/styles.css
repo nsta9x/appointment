@@ -54,10 +54,10 @@ a{
 #apt_main_p1 div{
 	position: relative;
 	margin: 0 auto;
-	margin-top:200px;
-	height:60px;
-	width: 200px;
-	background-color: red;
+	margin-top:220px;
+	height:200px;
+	width: 70%;
+	background-color: white;
 }
 
 #apt_main{
