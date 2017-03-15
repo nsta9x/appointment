@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 div{
-	display: block;
+/* 	display: block; */
 }
 
 a{
@@ -32,33 +32,29 @@ a{
 	position: fixed;
 	text-align: center;
 	padding: 2px;
+	margin-left: 10%;
+	margin-top: 10%;
 }
 
 #frm_login{
 	width: 60%;
 }
 #apt_main_p1{
+	padding-top: 12%;
 	height:450px;
-	display: block;
 	width: 100%;
 	background-image : url("../img/1.jpg");
 /* 	background-size : cover; */
 	background-repeat : repeat-x repeat-y;
 /* 	background-size: 100% 100%; */
 }
-#apt_main_p1 h1, h3{
-	text-align: center;
-	position: relative;
-	top: 200px;
-}
-#apt_main_p1 div{
-	position: relative;
+
+#apt_main_p11{
+	positive: relative;
 	margin: 0 auto;
-	margin-top:220px;
-	height:200px;
-	width: 70%;
-	background-color: white;
+	width: 50%;
 }
+
 
 #apt_main{
 	height: auto;
