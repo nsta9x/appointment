@@ -51,7 +51,14 @@ a{
 	position: relative;
 	top: 200px;
 }
-
+#apt_main_p1 div{
+	position: relative;
+	margin: 0 auto;
+	margin-top:200px;
+	height:60px;
+	width: 200px;
+	background-color: red;
+}
 
 #apt_main{
 	height: auto;
