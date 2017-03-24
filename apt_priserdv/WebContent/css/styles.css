@@ -9,7 +9,7 @@ a{
 }
 
 #apt_header{
-	height: 100px;
+	height: 75px;
 	width: 100%;
 	display: block;
 	background-color: rgba(100,120,120,0.2);
@@ -19,8 +19,8 @@ a{
 }
 
 #apt_header img{
-	max-height: 90px;
-	margin-top: 0px;
+	width: 70px;
+	height: 70px;
 }
 
 #apt_login{
