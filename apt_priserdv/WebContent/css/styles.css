@@ -43,10 +43,10 @@ a{
 	padding-top: 12%;
 	height:450px;
 	width: 100%;
-	background-image : url("../img/1.jpg");
-/* 	background-size : cover; */
-	background-repeat : repeat-x repeat-y;
-/* 	background-size: 100% 100%; */
+	background-image : url("../img/hopital1.jpg");
+ 	background-size : cover; 
+	background-repeat:no-repeat;
+	background-size: 100% 100%; 
 }
 
 #apt_main_p11{
@@ -54,7 +54,33 @@ a{
 	margin: 0 auto;
 	width: 50%;
 }
+#apt_main_p12{
+	background-color: rgba(100,120,120,0.7);
+	width:60%;
+	height: 40px;
+	position: relative;
+	margin-top:10%;
+	margin-left: auto;
+margin-right: auto;
+padding-left: 8%;
 
+}
+#apt_main_p12 input,p{
+	float:left;
+	position: relative;
+	margin-top:5px;
+}
+#apt_main_p12 input{
+	width:200px;
+	height: 32px;
+	color:blue;
+}
+#apt_main_p12 p button{
+	margin-top:5px;
+}
+#apt_main_p12 input, textarea {
+  background-color : #d1d1d1;
+}
 
 #apt_main{
 	height: auto;
