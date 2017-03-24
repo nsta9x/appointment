@@ -88,9 +88,10 @@ border-radius: 5px;
 #apt_main_p2{
 	width:100%;
 	height: 150px;
+	background-image:  url("../img/dg.png");
+	background-repeat: left top repeat;
 	position:relative;
 	padding-top:10px;
-	
 }
 #apt_main_p22 div{
 	width:12%;
