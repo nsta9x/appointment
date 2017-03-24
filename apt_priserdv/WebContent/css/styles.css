@@ -14,6 +14,7 @@ a{
 	display: block;
 	background-color: rgba(100,120,120,0.2);
 	position: fixed;
+	z-index:1; 
 	top: 0;
 }
 
@@ -56,13 +57,14 @@ a{
 }
 #apt_main_p12{
 	background-color: rgba(100,120,120,0.7);
-	width:60%;
-	height: 40px;
+	width:48%;
+	height: 43px;
 	position: relative;
-	margin-top:10%;
+	margin-top:21.5%;
 	margin-left: auto;
 margin-right: auto;
-padding-left: 8%;
+padding-left: 1%;
+border-radius: 5px;
 
 }
 #apt_main_p12 input,p{
@@ -71,9 +73,10 @@ padding-left: 8%;
 	margin-top:5px;
 }
 #apt_main_p12 input{
-	width:200px;
+	width:210px;
 	height: 32px;
-	color:blue;
+	color:green;
+	border-radius: 3px;
 }
 #apt_main_p12 p button{
 	margin-top:5px;
@@ -83,7 +86,7 @@ padding-left: 8%;
 }
 
 #apt_main{
-	height: auto;
+	height: 1200px;
 	margin-top: -22px;
 	
 }

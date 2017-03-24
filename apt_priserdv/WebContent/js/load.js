@@ -17,3 +17,13 @@ $( document ).ready(function() {
 	});
 	
 });
+$(function(){
+	$(window).on("scroll", function(){
+		if($(window).scrollTop()>100){
+			$("#apt_header").css("background-color", "white");
+		}
+		else{
+			$("#apt_header").css("background-color", "rgba(100,120,120,0.2)");
+		}
+	})
+})
