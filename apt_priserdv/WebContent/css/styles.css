@@ -114,6 +114,7 @@ left: 0;
 	margin-top:10px;
 	font-size:10px;
 	text-align:center;
+	position:relative;
 }
 #apt_main_p21, #apt_main_p23{
 	width:15%;
