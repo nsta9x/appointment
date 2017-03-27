@@ -53,32 +53,50 @@ a{
 
 
 #apt_main_p12{
-	background-color: rgba(100,120,120,0.7);
-	width:48%;
-	height: 7%;
-padding-left: 1%;
+background-color: rgba(100,120,120,0.7);
+width:50%;
+height:50px;
 border-radius: 5px;
-position:absolute;
+position:relative;
 top:80%;
-left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+padding:0;
+margin:0;
+ margin-left: auto; 
+ margin-right: auto; 
 }
-#apt_main_p12 input,p{
+
+#input1{
 	float:left;
-	postion:relative;
-	margin-top:5px;
-}
-#apt_main_p12 input{
-	width:40%;
-	height: 40xp;
+	position:absolute;
+	width:33%;
+	height: 80%;
 	color:green;
 	border-radius: 3px;
+	left:6%;
+	top:10%;
+	border-color: green green;
 }
-#apt_main_p12 p button{
-	margin-top:5px;
+#input2{
+	float:left;
+	position:absolute;
+	width:33%;
+	height: 80%;
+	color:green;
+	border-radius: 3px;
+	left:39%;
+	top:10%;
+	border-color: green green;
 }
+
+#apt_main_p12 button{
+	float:left;
+	position:absolute;
+	width:15%;
+	height:80%;
+	left:75%;
+	top:10%;
+}
+
 #apt_main_p12 input, textarea {
   background-color : #d1d1d1;
 }
@@ -112,7 +130,8 @@ left: 0;
 }
 #apt_main_p22 p{
 	margin-top:10px;
-	font-size:10px;
+	font-size:14px;
+	font-weight: bold;
 	text-align:center;
 	position:relative;
 }
