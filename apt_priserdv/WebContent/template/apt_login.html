@@ -3,6 +3,7 @@
 	<input id= "btn_login_login"  class="apt_login_btn"	type="image" src="img/btn_login.png"   alt="LogIn">
 	<input id= "btn_login_signup" class="apt_login_btn"	type="image" src="img/btn_reg.png"  alt="Create Account">
 </div>
+
 <div id="frm_login">
 		<form id="frm_login_login">
 			<div class="input-group">
@@ -21,13 +22,21 @@
 		<form id="frm_login_signup">
 			<div class="input-group">
 		   		<span class="input-group-addon">Your name* :</span>
-		    	<input type="text" class="form-control" aria-required="true" placeholder="Ex: TA Ngoc">
+		    	<input type="text" class="form-control" aria-required="true">
 		  	</div>
 		  	<div class="input-group">
 		   		<span class="input-group-addon">Your email* :</span>
-		    	<input type="email" class="form-control" aria-required="true" placeholder="Ex: son@hnv.fr">
+		    	<input type="email" class="form-control" aria-required="true">
 		  	</div>
-			<div class="input-group">
+		  	<div class="col-sm-6 input-group">
+		  		<span class="input-group-addon">Password* :</span>
+		    	<input type="password" class="form-control" aria-required="true">
+		  	</div>
+		  	<div class="col-sm-6 input-group">
+		  		<span class="input-group-addon">Re-type password* :</span>
+		    	<input type="password" class="form-control" aria-required="true">
+		  	</div>
+			<div class="input-group col-sm-6">
 				<span class="input-group-addon">Year of birth* :</span>
 					<select class="form-control">							
 						<option value="1998">1998</option><option value="1997">1997</option>
@@ -83,4 +92,5 @@
 			</div>
 		</form>
 </div>
+
 <div id="userform-close" style="text-align: center;"><button class="btn-info">CLOSE THIS WINDOWS</button></div>

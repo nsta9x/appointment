@@ -1,7 +1,10 @@
 @CHARSET "ISO-8859-1";
 
-div{
-/* 	display: block; */
+body{
+	display: block;
+	max-width: 1500px;
+	margin: auto;
+	width: 100%;
 }
 
 a{
@@ -9,9 +12,9 @@ a{
 }
 
 #apt_header{
+	display: block;
 	height: 75px;
 	width: 100%;
-	display: block;
 	background-color: rgba(100,120,120,0.2);
 	position: fixed;
 	z-index:1; 
@@ -19,8 +22,8 @@ a{
 }
 
 #apt_header img{
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 }
 
 #apt_login{
@@ -40,8 +43,8 @@ a{
 #frm_login{
 	width: 60%;
 }
+
 #apt_main_p1{
-	
 	height:70%;
 	width: 100%;
 	background-image : url("../img/hopital.jpg");
@@ -51,55 +54,66 @@ a{
 	position:relative;
 }
 
+#apt_main_searchbar{
+	width: 40%;
+	height: 45px;
+	background-color : #d1d1d1;
+	border-radius: 5px;
+	position:relative;
+	top:80%;
+/* 	padding:0; */
+/* 	margin:0; */
+	margin: auto;
+	text-align: center;
+}
 
-#apt_main_p12{
-background-color: rgba(100,120,120,0.7);
-width:50%;
-height:50px;
-border-radius: 5px;
-position:relative;
-top:80%;
-padding:0;
-margin:0;
- margin-left: auto; 
- margin-right: auto; 
+.searchfield{
+	width: 40%;
+	height: 40px;
+	color:green;
+	border-radius: 5px;
+	border-color: green green;
+	margin: auto;
+	display: inline-block;
 }
 
 #input1{
-	float:left;
+/* 	float:left; */
 	position:absolute;
-	width:33%;
-	height: 80%;
+/* 	width:33%; */
+/* 	height: 80%; */
 	color:green;
 	border-radius: 3px;
-	left:6%;
-	top:10%;
+/* 	left:6%; */
+/* 	top:10%; */
 	border-color: green green;
+	margin: auto;
 }
 #input2{
-	float:left;
+/* 	float:left; */
 	position:absolute;
-	width:33%;
-	height: 80%;
+/* 	width:33%; */
+/* 	height: 80%; */
 	color:green;
 	border-radius: 3px;
-	left:39%;
-	top:10%;
+/* 	left:39%; */
+/* 	top:10%; */
 	border-color: green green;
+	margin: auto;
 }
 
-#apt_main_p12 button{
-	float:left;
-	position:absolute;
-	width:15%;
-	height:80%;
-	left:75%;
-	top:10%;
-}
+/* #apt_main_p12 button{ */
+/* 	float:left; */
+/* 	position:absolute; */
+/* 	width:15%; */
+/* 	height:80%; */
+/* 	left:75%; */
+/* 	top:10%; */
+/* } */
 
-#apt_main_p12 input, textarea {
-  background-color : #d1d1d1;
-}
+/* #apt_main_p12 input, textarea { */
+/*   background-color : #d1d1d1; */
+/* } */
 
 #apt_main_p2{
 	width:100%;
@@ -143,6 +157,14 @@ margin:0;
 #apt_main{
 	height: 800px;
 	margin-top: -22px;
-	
 }
 
+#frm_login{
+	margin: auto;
+	width: 90%;
+}
+
+.input-group{
+	margin-top: 7px;
+	display: inline-block;
+}
