@@ -1,9 +1,11 @@
 @CHARSET "ISO-8859-1";
 
-
-
 a{
 	cursor:pointer;
+}
+
+.center{
+	text-align: center;
 }
 
 #apt_header{
@@ -50,20 +52,17 @@ a{
 }
 
 #apt_main_searchbar{
-	width: 40%;
-	height: 45px;
-	background-color : #d1d1d1;
+	display: block;
+	width: 70%;
 	border-radius: 5px;
 	position:relative;
 	top:80%;
-/* 	padding:0; */
-/* 	margin:0; */
 	margin: auto;
 	text-align: center;
 }
 
 .searchfield{
-	width: 40%;
+	width: 45%;
 	height: 40px;
 	color:green;
 	border-radius: 5px;
@@ -73,46 +72,21 @@ a{
 }
 
 #apt_main_p2{
-	width:100%;
-	height: 300px;
+	width: 100%;
+	height: auto;
 	background-image:  url("../img/dg.png");
 	background-repeat: left top repeat;
 	position:relative;
 	padding-top:10px;
-}
-#apt_main_p22{
-	width:70%;
-	height:100%;
-	position:relative;
-}
-#apt_main_p22 div{
-	/*width:12%;
-	height:70%;
-	float:left ;*/
-	height:100%;
-	position:relative;
-	/*margin-top:1%;
-	margin-left: 10%;*/
-}
-#apt_main_p22 img{
-	width:40%;
-	height:40%;
-	position:relative;
-	margin-left:20%;	
+	text-align: center;
 }
 
-#apt_main_p22 p{
-	margin-top:10px;
-	font-size:14px;
-	font-weight: bold;
-	text-align:center;
-	position:relative;
+#apt_main_p2 img{
+	width: 80px;
+	height: 80px;
+	margin-bottom: 10px;
 }
-#apt_main_p21, #apt_main_p23{
-	width:15%;
-	height:100%;
-	float:left
-}
+
 #apt_main{
 /* 	height: 800px; */
 	margin-top: -22px;
@@ -126,4 +100,14 @@ a{
 .input-group{
 	margin-top: 7px;
 	display: inline-block;
+}
+
+#apt_footer p{
+	 line-height: 10px;
+	 color: #D4D4D4;
+}
+
+#apt_footer{
+	background-color: #3E4651;
+	padding: 10px;
 }
