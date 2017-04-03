@@ -1,13 +1,19 @@
 @CHARSET "ISO-8859-1";
-@media screen and (max-width: 500px){
+@media screen and (max-width: 605px){
 #apt_login{
 	opacity: 1;
 }
 #apt_main_p2{
-	height:600px;
+	height:auto;
 }
 #apt_main_p22{
-	
+	width:100%;
+}
+#apt_main_p22 div{
+	height:25%;
+}
+#apt_main{
+	height:relative;
 }
 
 	}

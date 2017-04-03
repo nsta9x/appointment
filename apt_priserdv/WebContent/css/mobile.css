@@ -20,6 +20,7 @@
 }
 
 @media (max-width:605px) {
+	
     #apt_main_searchbar{
 		width: 100%;
 		height: 45px;
@@ -28,6 +29,7 @@
 		top:70%;
 		margin: auto;
 		text-align: center;
+		background-color:transparent;
 	}
     .searchfield{
 		width: 90%;

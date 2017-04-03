@@ -40,7 +40,7 @@ a{
 }
 
 #apt_main_p1{
-	height:70%;
+	height:550px;
 	width: 100%;
 	background-image : url("../img/hopital.jpg");
  	background-size : cover; 
@@ -72,23 +72,9 @@ a{
 	display: inline-block;
 }
 
-#input1{
-/* 	float:left; */
-	position:absolute;
-/* 	width:33%; */
-/* 	height: 80%; */
-	color:green;
-	border-radius: 3px;
-/* 	left:6%; */
-/* 	top:10%; */
-	border-color: green green;
-	margin: auto;
-}
-
-
 #apt_main_p2{
 	width:100%;
-	height: 30%;
+	height: 300px;
 	background-image:  url("../img/dg.png");
 	background-repeat: left top repeat;
 	position:relative;
@@ -97,7 +83,7 @@ a{
 #apt_main_p22{
 	width:70%;
 	height:100%;
-	float:left;
+	position:relative;
 }
 #apt_main_p22 div{
 	/*width:12%;
@@ -114,11 +100,7 @@ a{
 	position:relative;
 	margin-left:20%;	
 }
-#apt_main_p22{
-	width:70%;
-	height:100%;
-	float:left;
-}
+
 #apt_main_p22 p{
 	margin-top:10px;
 	font-size:14px;
@@ -132,7 +114,7 @@ a{
 	float:left
 }
 #apt_main{
-	height: 800px;
+/* 	height: 800px; */
 	margin-top: -22px;
 }
 
