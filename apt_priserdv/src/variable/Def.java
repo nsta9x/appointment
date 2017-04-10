@@ -1,11 +1,11 @@
 package variable;
 
 public class Def {
-	public static final String dbUrl = "A";
-	public static final String dbUsername = "A";
-	public static final String dbPassword = "A";
+	public static final String dbUrl = "jdbc:mysql://localhost/apt";
+	public static final String dbUsername = "root";
+	public static final String dbPassword = "";
 	
-	public static String tab_user = "T_User";
+	public static String tab_user = "t_user";
 	public static String tab_user_name 	= "username";
 	public static String tab_user_pass		="password";
 	public static String tab_user_realname = "realname";

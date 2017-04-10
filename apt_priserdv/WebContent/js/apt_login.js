@@ -24,6 +24,15 @@
 			$("#apt_login").hide();
 		});
 	});
+	$("#testbtn").click(function(event){
+		event.preventDefault(); //cau lenh tranh tai lai trang
+		var user = "leanhtu";
+		var pass = "123456";
+	//	$.post("diachi",data gui len, data gui xuong)
+		$.get("Login",{"username":user,"password":pass}, function(data){
+			alert(data);
+		});
+	});
 	
 	//$("#btn_login").off("click");
 	//$("#btn_login").on("click", function(){
