@@ -1,5 +1,6 @@
 #client{
 	width:70%;
+	background-color:#ecf0f1;
 }
 #client_p1{
 	height:100%;
@@ -27,14 +28,13 @@
 	top: 30px;
 	}
 #client_p21{
-	height:400px;
-
-	background-color:blue;
+	height:390px;
+	background-color:white;
 	position:relative;
 }
 #client_p22{
-	height:400px;
-
-	background-color:black;
+	height:390px;
+	background-color:white;
 	position:relative;
+	margin-top:20px;
 }

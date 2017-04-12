@@ -16,15 +16,21 @@
 				event.preventDefault(); //cau lenh tranh tai lai trang
 				var user = $("#account").val();
 				var pass = $("#password").val();
+				$("#apt_main").load(temp_client);
+				$("#apt_main").hide();
 			//	$.post("diachi",data gui len, data gui xuong)
 				$.get("Login",{"username":user,"password":pass}, function(data){
 					if(data){			
-						var user = jQuery.parseJSON(data);
+						var user = jQuery.parseJSON(data);				
 						$("#div_user").html("Chao mung " + user.C_nom + " da dang nhap.");
-						$("#apt_main").load(temp_client);
-						$("#sex").html(user.C_sex);
+						$("#apt_main").show();
 						$("#user_nom").html(user.C_nom + " " + user.C_prenom);
-						alert("Ngay sinh nhat: " + user.C_bday);
+						$("#sex").html(user.C_sex);
+						$("#work").html(user.C_work);
+						$("#address").html(user.C_address+user.C_cp+"Paris");
+						$("#email").html(user.C_email);
+						$("#phone").html(user.C_tel);
+						$("#bday").html(user.C_bday);
 					}
 				});
 			});
