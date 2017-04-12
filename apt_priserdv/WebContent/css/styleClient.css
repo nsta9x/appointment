@@ -1,0 +1,40 @@
+#client{
+	width:70%;
+}
+#client_p1{
+	height:100%;
+	background-color:white;
+	position:relative;
+}
+#client_p2{
+	height:100%;
+}
+#client_p11{
+	height:300px;
+	position:relative;
+}
+#client_p11 img{	
+	height:100%;
+	position: relative;
+}
+#client_p12{
+	height:500px;
+	background-color:white;
+	
+}
+#client_p12 p{
+	position: relative;
+	top: 30px;
+	}
+#client_p21{
+	height:400px;
+
+	background-color:blue;
+	position:relative;
+}
+#client_p22{
+	height:400px;
+
+	background-color:black;
+	position:relative;
+}
