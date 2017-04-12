@@ -19,18 +19,14 @@
 				$("#apt_main").load(temp_client);
 				$("#apt_main").hide();
 			//	$.post("diachi",data gui len, data gui xuong)
-				$.get("Login",{"username":user,"password":pass}, function(data){
-					if(data){			
-						var user = jQuery.parseJSON(data);				
-						$("#div_user").html("Chao mung " + user.C_nom + " da dang nhap.");
-						$("#apt_main").show();
-						$("#user_nom").html(user.C_nom + " " + user.C_prenom);
-						$("#sex").html(user.C_sex);
-						$("#work").html(user.C_work);
-						$("#address").html(user.C_address+user.C_cp+"Paris");
-						$("#email").html(user.C_email);
-						$("#phone").html(user.C_tel);
-						$("#bday").html(user.C_bday);
+				$.get("Login",{"username":user,"password":pass}, function(r){
+//					alert(r);
+					var r_data = jQuery.parseJSON(r);	
+					switch(r_data.statut){
+						case "1": afterLogin(r_data.data); break;
+						case "2": alert("Wrong password."); break;
+						case "4": alert(r_data.data); break;
+						default: alert("Error undefined.");
 					}
 				});
 			});
@@ -46,7 +42,18 @@
 			$("#apt_login").hide();
 		});
 	});
-
+	
+	function afterLogin(user){	
+			$("#div_user").html("Chao mung " + user.C_nom + " da dang nhap.");
+			$("#apt_main").show();
+			$("#user_nom").html(user.C_nom + " " + user.C_prenom);
+			$("#sex").html(user.C_sex);
+			$("#work").html(user.C_work);
+			$("#address").html(user.C_address + ", " + user.C_cp+" Paris");
+			$("#email").html(user.C_email);
+			$("#phone").html(user.C_tel);
+			$("#bday").html(user.C_bday);
+	}
 	
 	//$("#btn_login").off("click");
 	//$("#btn_login").on("click", function(){

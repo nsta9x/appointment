@@ -47,16 +47,16 @@ public class Login extends HttpServlet {
             	//id username password
             	User a 	= User.createUser(rset);
             	String b= User.stringUser(a);
-            	response.getWriter().write(b);
+            	Return.response(Return.return_ok, b, response);
             }
             else{
-            	response.getWriter().write("Pas de resultat");
+            	Return.response(Return.return_wrong_pass, null, response);
             }
             stmt.close();
             conn.close();
             
         } catch (Exception ex) {
-            response.getWriter().write("Error:  " + ex);
+        	Return.response(Return.return_exception, "Error: " + ex, response);
         } finally {
         	 response.getWriter().close();
         }
