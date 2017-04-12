@@ -11,6 +11,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.tools.JavaFileObject;
+
+import object.User;
 import variable.Def;
 
 @WebServlet( name="Login", urlPatterns = "/Login")
@@ -30,6 +33,8 @@ public class Login extends HttpServlet {
          String pass = request.getParameter("password");
          
          try {  
+        	 Class.forName("com.mysql.jdbc.Driver");
+
             Connection conn = DriverManager.getConnection(
                     Def.dbUrl, Def.dbUsername, Def.dbPassword);
             Statement stmt = conn.createStatement();
@@ -42,10 +47,11 @@ public class Login extends HttpServlet {
             if (rset.next()) {
             	//id username password 
             	String r_realname = rset.getString(Def.tab_user_realname);
-   
+            	String r_sex= rset.getString(Def.tab_user_sex);
+            	User a = new User(r_realname, r_sex);
+            	String b= Def.userToString(a);
             	response.getWriter().write(
-            			r_realname
-            			);      			
+            			b);
             }
             else{
             	response.getWriter().write("Pas de resultat");

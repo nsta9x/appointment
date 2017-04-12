@@ -7,11 +7,26 @@
 	$("#btn_login").on("click", function(){
 		$("#apt_login")		.toggle(1000);
 		$("#frm_login").hide();
-		
+	var temp_client ="template/apt_client.html";
 		$("#btn_login_login").click(function(){
 			$("#frm_login").show();
 			$("#frm_login_login").show();
 			$("#frm_login_signup").hide();
+			$("#frm_login_login").submit(function(event){
+				event.preventDefault(); //cau lenh tranh tai lai trang
+				var user = $("#account").val();
+				var pass = $("#password").val();
+			//	$.post("diachi",data gui len, data gui xuong)
+				$.get("Login",{"username":user,"password":pass}, function(data){
+					if(data){			
+						var obj = jQuery.parseJSON(data);
+						$("#div_user").html("Chao mung " + obj.realname + " da dang nhap.");
+						$("#apt_main").load(temp_client);
+						$("#sex").html(obj.sex);
+						
+					}
+				});
+			});
 		});
 	
 		$("#btn_login_signup").click(function() {
@@ -24,15 +39,7 @@
 			$("#apt_login").hide();
 		});
 	});
-	$("#testbtn").click(function(event){
-		event.preventDefault(); //cau lenh tranh tai lai trang
-		var user = "leanhtu";
-		var pass = "123456";
-	//	$.post("diachi",data gui len, data gui xuong)
-		$.get("Login",{"username":user,"password":pass}, function(data){
-			alert(data);
-		});
-	});
+
 	
 	//$("#btn_login").off("click");
 	//$("#btn_login").on("click", function(){

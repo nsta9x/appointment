@@ -1,5 +1,7 @@
 @CHARSET "ISO-8859-1";
-
+html{
+	width:100%;
+}
 a{
 	cursor:pointer;
 }
@@ -43,7 +45,6 @@ a{
 
 #apt_main_p1{
 	height:550px;
-	width: 100%;
 	background-image : url("../img/hopital.jpg");
  	background-size : cover; 
 	background-repeat:no-repeat;
@@ -72,10 +73,11 @@ a{
 }
 
 #apt_main_p2{
-	width: 100%;
+	
 	height: auto;
 	background-image:  url("../img/dg.png");
 	background-repeat: left top repeat;
+	background-color:white;
 	position:relative;
 	padding-top:10px;
 	text-align: center;
