@@ -11,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.tools.JavaFileObject;
 
 import object.User;
 import variable.Def;
@@ -45,13 +44,10 @@ public class Login extends HttpServlet {
 
             // Step 3: Process the query result set
             if (rset.next()) {
-            	//id username password 
-            	String r_realname = rset.getString(Def.tab_user_realname);
-            	String r_sex= rset.getString(Def.tab_user_sex);
-            	User a = new User(r_realname, r_sex);
-            	String b= Def.userToString(a);
-            	response.getWriter().write(
-            			b);
+            	//id username password
+            	User a 	= User.createUser(rset);
+            	String b= User.stringUser(a);
+            	response.getWriter().write(b);
             }
             else{
             	response.getWriter().write("Pas de resultat");

@@ -19,11 +19,12 @@
 			//	$.post("diachi",data gui len, data gui xuong)
 				$.get("Login",{"username":user,"password":pass}, function(data){
 					if(data){			
-						var obj = jQuery.parseJSON(data);
-						$("#div_user").html("Chao mung " + obj.realname + " da dang nhap.");
+						var user = jQuery.parseJSON(data);
+						$("#div_user").html("Chao mung " + user.C_nom + " da dang nhap.");
 						$("#apt_main").load(temp_client);
-						$("#sex").html(obj.sex);
-						
+						$("#sex").html(user.C_sex);
+						$("#user_nom").html(user.C_nom + " " + user.C_prenom);
+						alert("Ngay sinh nhat: " + user.C_bday);
 					}
 				});
 			});
