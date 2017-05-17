@@ -4,6 +4,7 @@
 	
 	//Click button Login:
 	$("#btn_login").off("click");
+	
 	$("#btn_login").on("click", function(){
 		$("#apt_login")		.toggle(1000);
 		$("#frm_login").hide();
@@ -20,7 +21,7 @@
 				$("#apt_main").hide();
 			//	$.post("diachi",data gui len, data gui xuong)
 				$.get("Login",{"username":user,"password":pass}, function(r){
-//					alert(r);
+alert(r);
 					var r_data = jQuery.parseJSON(r);	
 					switch(r_data.statut){
 						case "1": afterLogin(r_data.data); break;

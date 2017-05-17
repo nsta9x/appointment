@@ -15,7 +15,7 @@ public class User {
 	public String C_work;
 	public String C_bday;
 	
-	public static String tab_client 	= "Client";
+	public static String tab_client 	= "client";
 	public static String tC_id 			= "C_id";
 	public static String tC_email		= "C_email";
 	public static String tC_password 	= "C_password";
