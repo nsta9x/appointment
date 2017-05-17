@@ -33,12 +33,9 @@ public class Login extends HttpServlet {
          
          try {  
         	 Class.forName("com.mysql.jdbc.Driver");
-        	 
-
-//            Connection conn = DriverManager.getConnection(
-//                    Def.dbUrl, Def.dbUsername, Def.dbPassword);
-        	 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/apt_priserdv","root", "");
-            Statement stmt = conn.createStatement();
+        	 Connection conn = DriverManager.getConnection(Def.dbUrl, Def.dbUsername, Def.dbPassword);
+        	// Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/apt_priserdv","root", "");
+        	 Statement stmt = conn.createStatement();
             
             // Step 2: Execute a SQL SELECT query
             String sql = Def.serviceLogin(user, pass);

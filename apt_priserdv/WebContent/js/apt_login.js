@@ -21,7 +21,7 @@
 				$("#apt_main").hide();
 			//	$.post("diachi",data gui len, data gui xuong)
 				$.get("Login",{"username":user,"password":pass}, function(r){
-alert(r);
+					//alert(r);
 					var r_data = jQuery.parseJSON(r);	
 					switch(r_data.statut){
 						case "1": afterLogin(r_data.data); break;
@@ -45,7 +45,7 @@ alert(r);
 	});
 	
 	function afterLogin(user){	
-			$("#div_user").html("Chao mung " + user.C_nom + " da dang nhap.");
+			$("#div_user").html("Welcome " + user.C_nom);
 			$("#apt_main").show();
 			$("#user_nom").html(user.C_nom + " " + user.C_prenom);
 			$("#sex").html(user.C_sex);
