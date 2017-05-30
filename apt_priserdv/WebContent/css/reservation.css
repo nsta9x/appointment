@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+#reservation{
+	width:70%;
+	background-color:white;
+	height: 500px;
+}
+#reservation p{
+	position:relative;
+	top:200px;
+}
