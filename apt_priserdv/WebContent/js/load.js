@@ -15,6 +15,10 @@ $( document ).ready(function() {
 	var script_login = "js/apt_login.js";
 	$.getScript( script_login, function() {
 	});
+	//SearchDoctor
+	var script_search = "js/apt_search.js";
+	$.getScript( script_search, function() {
+	});
 	
 });
 $(function(){

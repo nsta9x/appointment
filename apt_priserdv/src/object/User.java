@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class User {
-	public int C_id;
+	public static int C_id;
 	public String C_email;
 	public String C_nom;
 	public String C_prenom;
@@ -30,7 +30,7 @@ public class User {
 			
 	public User(int C_id, String C_email, String C_nom, String C_prenom, String C_sex, String C_address, 
 			int C_cp, String C_tel, String C_work, String C_bday){
-		this.C_id = C_id;
+		User.C_id = C_id;
 		this.C_email = C_email;
 		this.C_nom = C_nom;
 		this.C_prenom = C_prenom;
@@ -60,9 +60,9 @@ public class User {
 	public static String stringUser(User a){
 		String s = "{" 
 				+  "\""  + tC_id + "\" : \"" + a.C_id  + "\"" + ","
-				+  "\""  + tC_email + "\" : \"" + a.C_email  + "\"" + "," 
 				+  "\""  + tC_nom + "\" : \"" + a.C_nom  + "\"" + "," 
 				+  "\""  + tC_prenom + "\" : \"" + a.C_prenom  + "\"" + "," 
+				+  "\""  + tC_email + "\" : \"" + a.C_email  + "\"" + "," 
 				+  "\""  + tC_sex + "\" : \"" + a.C_sex  + "\"" + ","
 				+  "\""  + tC_address + "\" : \"" + a.C_address  + "\"" + "," 
 				+  "\""  + tC_cp + "\" : \"" + a.C_cp  + "\"" + "," 

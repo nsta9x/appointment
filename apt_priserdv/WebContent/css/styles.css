@@ -29,7 +29,7 @@ a{
 	width: 80%;
 	border-collapse: collapse;
 	padding: 3px;
-	z-index: 1 !important;
+	z-index: 0 !important;
 	background-color: #292732;
 	opacity: 0.8;
 	position: fixed;

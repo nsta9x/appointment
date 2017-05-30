@@ -9,7 +9,6 @@
 		$("#apt_login")		.toggle(1000);
 		$("#frm_login").hide();
 	var temp_client ="template/apt_client.html";
-		$("#btn_login_login").click(function(){
 			$("#frm_login").show();
 			$("#frm_login_login").show();
 			$("#frm_login_signup").hide();
@@ -18,10 +17,10 @@
 				var user = $("#account").val();
 				var pass = $("#password").val();
 				$("#apt_main").load(temp_client);
-				$("#apt_main").hide();
+//				$("#apt_main").hide();
 			//	$.post("diachi",data gui len, data gui xuong)
 				$.get("Login",{"username":user,"password":pass}, function(r){
-					//alert(r);
+					alert(r);
 					var r_data = jQuery.parseJSON(r);	
 					switch(r_data.statut){
 						case "1": afterLogin(r_data.data); break;
@@ -42,7 +41,7 @@
 		$("#userform-close").click(function() {
 			$("#apt_login").hide();
 		});
-	});
+	
 	
 	function afterLogin(user){	
 			$("#div_user").html("Welcome " + user.C_nom);
