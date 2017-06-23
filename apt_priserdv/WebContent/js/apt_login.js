@@ -9,9 +9,12 @@
 		$("#apt_login")		.toggle(1000);
 		$("#frm_login").hide();
 	var temp_client ="template/apt_client.html";
+	$("#btn_login_login").click(function(){
 			$("#frm_login").show();
 			$("#frm_login_login").show();
 			$("#frm_login_signup").hide();
+			$("#apt_main_searchbar").hide();
+	});
 			$("#frm_login_login").submit(function(event){
 				event.preventDefault(); //cau lenh tranh tai lai trang
 				var user = $("#account").val();
@@ -30,17 +33,20 @@
 					}
 				});
 			});
-		});
+		
 	
 		$("#btn_login_signup").click(function() {
 			$("#frm_login").show();
 			$("#frm_login_signup").show();
 			$("#frm_login_login").hide();
+			$("#apt_main_searchbar").hide();
 		});
 	
 		$("#userform-close").click(function() {
 			$("#apt_login").hide();
+			$("#apt_main_searchbar").show();
 		});
+	});
 	
 	
 	function afterLogin(user){	

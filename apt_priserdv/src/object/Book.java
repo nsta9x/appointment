@@ -1,6 +1,7 @@
 package object;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import object.Doctor;
 import object.User;
@@ -12,7 +13,7 @@ public class Book {
 	String R_date;
 	String R_status;
 	
-	public static String tab_reservation	= "reservation";
+	public static String tab_reservation	= "Reservation";
 	public static String tR_id				= "R_id";
 	public static String tR_did				= "R_did";
 	public static String tR_cid				= "R_cid";
@@ -46,10 +47,24 @@ public static String stringBook(Book a){
 			+  "\""  + tR_cid + "\" : \"" + a.R_cid  + "\"" + ","
 			+  "\""  + tR_heure + "\" : \"" + a.R_heure  + "\"" + ","
 			+  "\""  + tR_date + "\" : \"" + a.R_date  + "\"" + ","
-			+  "\""  + tR_status + "\" : \"" + a.R_status  + "\"" + ","
+			+  "\""  + tR_status + "\" : \"" + a.R_status + "\""
 			+ "}";
 	return s;
 }
+
+public static String stringListBook(List<Book> a){
+	String s = "[";
+	int i = 1;
+	for (Book b : a){
+		s+= stringBook(b);
+		if(i < a.size()){ s+= ", ";}
+		i++;
+	}
+	s+= "]";
+	return s;
+}
+
+
 //SELECT * FROM reservation, doctor WHERE R_did = D_id AND D_cp='75013' AND D_spe = 'Dentiste'
 public static String searchBook(int D_id){
 	String sql = "SELECT * FROM " +  Book.tab_reservation + " WHERE  " 

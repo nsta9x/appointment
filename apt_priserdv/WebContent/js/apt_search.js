@@ -19,14 +19,4 @@ $("#frm_search").submit(function(event){
 	});
 }
 );
-function afterSearch(doctor){	
-	$("#D_nom").html("Welcome " + doctor.D_nom);
-//	$("#apt_main").show();
-	$("#D_prenom").html(doctor.D_prenom);
-//	$("#sex").html(user.C_sex);
-//	$("#work").html(user.C_work);
-//	$("#address").html(user.C_address + ", " + user.C_cp+" Paris");
-//	$("#email").html(user.C_email);
-//	$("#phone").html(user.C_tel);
-//	$("#bday").html(user.C_bday);
-}
+

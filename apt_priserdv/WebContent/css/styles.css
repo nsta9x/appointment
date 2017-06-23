@@ -16,7 +16,7 @@ a{
 	width: 100%;
 	background-color: rgba(100,120,120,0.2);
 	position: fixed;
-	z-index:1; 
+	z-index:2; 
 	top: 0;
 }
 
@@ -32,7 +32,7 @@ a{
 	z-index: 0 !important;
 	background-color: #292732;
 	opacity: 0.8;
-	position: fixed;
+	position: absolute;
 	text-align: center;
 	padding: 2px;
 	margin-left: 10%;

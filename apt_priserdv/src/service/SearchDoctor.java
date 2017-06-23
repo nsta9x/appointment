@@ -38,6 +38,7 @@ public class SearchDoctor extends HttpServlet {
          try {  
         	 Class.forName("com.mysql.jdbc.Driver");
         	 Connection conn = DriverManager.getConnection(Def.dbUrl, Def.dbUsername, Def.dbPassword);
+        	 
         	// Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/apt_priserdv","root", "");
         	 Statement stmt = conn.createStatement();
             
@@ -51,7 +52,7 @@ public class SearchDoctor extends HttpServlet {
 
             // Step 3: Process the query result set
             List<Doctor> listDoctor = new ArrayList<Doctor>();
-            String s="";
+           
             r.first();
             Doctor d;
             if(count>0){
@@ -70,42 +71,42 @@ public class SearchDoctor extends HttpServlet {
             
        
         Book b;
-        String s2="";
+        
         List<Book> listBook = new ArrayList<Book>();
-        String s1="";
+        
         int countBook=0;
 
         
-        int D_id=0;
-        for(int i=0; i<count;i++){
-        	D_id = listDoctor.get(i).getId();
-            String d1= Doctor.stringDoctor(listDoctor.get(i));
-            String sqlBook = Book.searchBook(D_id);//"SELECT * FROM reservation WHERE R_did='1'";;//
-            ResultSet rset = stmt.executeQuery(sqlBook);
+        int i=1;
+        String listdoctor_ = "[";
+        for (Doctor doctor_ : listDoctor){
+        	//D_id = listDoctor.get(i).getId();
+            String sqlBook = Book.searchBook(doctor_.D_id);//"SELECT * FROM reservation WHERE R_did='1'";;//
+            ResultSet rset = stmt.executeQuery(sqlBook);   
             rset.last();
             countBook=rset.getRow();
             rset.first();
+            
             if(countBook>0){
             	b = Book.createBook(rset);
             	listBook.add(b);
                 while (rset.next()) {
                 	b = Book.createBook(rset);
-                	listBook.add(b);         	
-              	
+                	listBook.add(b);    
                 }
            }
-            
-            for(int x=0;x<countBook;x++){
-            	String b1=Book.stringBook(listBook.get(x));
-            	s2 = s2+b1;
-            }
-            s1=s1+d1;
-            
+            doctor_.D_book = listBook;
+            String dt = Doctor.stringDoctor(doctor_);
+            listdoctor_ += dt;
+            if(i < listDoctor.size()) listdoctor_ += ",";
+            i++;
         }
-        s=s+s1+s2;
+        listdoctor_ += "]";
+ 
+        Return.response(Return.return_ok, listdoctor_, response);
         stmt.close();
         conn.close();
-            Return.response(Return.return_ok, s, response);
+            
         
          } catch (Exception ex) {
         	Return.response(Return.return_exception, "Error: " + ex, response);

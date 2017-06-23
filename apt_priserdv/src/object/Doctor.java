@@ -2,6 +2,7 @@ package object;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 
 public class Doctor {
@@ -11,26 +12,28 @@ public class Doctor {
 	public String D_email;
 	public String D_sex;
 	public String D_cabinet;
-	public String D_adrress;
+	public String D_address;
 	public String D_tel;
 	public int D_cp;
 	public String D_spe;
+	public List<Book> D_book;
 
-	public static String tab_doctor 	= "doctor";
+	public static String tab_doctor 	= "Docteur";
 	public static String tD_id 			= "D_id";
 	public static String tD_nom			= "D_nom";
 	public static String tD_prenom		= "D_prenom";
 	public static String tD_email		= "D_email";
 	public static String tD_sex			= "D_sex";
 	public static String tD_cabinet     = "D_cabinet";
-	public static String tD_adrress		= "D_adrress";
+	public static String tD_address		= "D_address";
 	public static String tD_cp			= "D_cp";
 	public static String tD_tel			= "D_tel";	
 	public static String tD_spe			= "D_spe";
+	public static String tD_book 		= "D_book";
 //name in database
 
 public Doctor(int D_id, String D_nom, String D_prenom, String D_email, String D_sex, String D_cabinet, String 
-		D_adrress, String D_tel, int D_cp, String D_spe){
+		D_address, String D_tel, int D_cp, String D_spe){
 	this.D_id = D_id;
 	this.D_nom = D_nom;
 	this.D_prenom = D_prenom;
@@ -38,10 +41,10 @@ public Doctor(int D_id, String D_nom, String D_prenom, String D_email, String D_
 	this.D_sex = D_sex;
 	this.D_cabinet = D_cabinet;
 	this.D_cabinet =D_cabinet;
-	this.D_adrress = D_adrress;
+	this.D_address = D_address;
 	this.D_tel = D_tel;
 	this.D_cp = D_cp;
-	this.D_spe = D_spe;	
+	this.D_spe = D_spe;
 }
 
 public static Doctor createDoctor(ResultSet r)throws SQLException{
@@ -51,7 +54,7 @@ public static Doctor createDoctor(ResultSet r)throws SQLException{
 	String email= r.getString(tD_email);
     String sex = r.getString(tD_sex);
     String cabinet= r.getString(tD_cabinet);
-    String address = r.getString(tD_adrress);
+    String address = r.getString(tD_address);
     int cp = r.getInt(tD_cp);
     String tel = r.getString(tD_tel);
     String spe= r.getString(tD_spe);
@@ -66,12 +69,16 @@ public static String stringDoctor(Doctor a){
 			+  "\""  + tD_email + "\" : \"" + a.D_email  + "\"" + "," 
 			+  "\""  + tD_sex + "\" : \"" + a.D_sex  + "\"" + ","
 			+  "\""  + tD_cabinet + "\" : \"" + a.D_cabinet  + "\"" + ","
-			+  "\""  + tD_adrress + "\" : \"" + a.D_adrress  + "\"" + ","
+			+  "\""  + tD_address + "\" : \"" + a.D_address  + "\"" + ","
 			+  "\""  + tD_tel + "\" : \"" + a.D_tel  + "\"" + ","
-			+  "\""  + tD_cp + "\" : \"" + a.D_cp  + "\""
+			+  "\""  + tD_cp + "\" : \"" + a.D_cp  + "\"" + ","
+			+  "\""  + tD_book + "\" : " + Book.stringListBook(a.D_book)
 			+ "}";
 	return s;
 }
+
+
+
 public static String searchDoctor(String spe, String cp){
 	String sql = "SELECT * FROM " +  Doctor.tab_doctor + " WHERE  " 
 			+ Doctor.tD_spe  +  " = '" + spe +
